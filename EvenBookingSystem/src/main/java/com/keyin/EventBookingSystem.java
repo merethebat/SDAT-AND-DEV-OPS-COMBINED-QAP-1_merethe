@@ -10,13 +10,39 @@ import java.util.Scanner;
 public class EventBookingSystem {
     
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         List <Event> events = new ArrayList<>();
 
-        Event concert = new Event("Michael Jackson Concert", "2026-06-15");
-        Event conference = new Event("Anime Expo", "2026-07-20");
-        
+        System.out.println("Welcome to Merethe's Event Booking System!");
 
+        Event concert = new Event("Summer Festival Concert", "2026-06-15");
+
+        System.out.println("Created event:" + concert.getName());
+        System.out.println("Date:" + concert.getDate());
+        System.out.println("Capacity:" + concert.getCapacity);
+
+        System.out.println();
+
+        events.add(concert);
+
+        // registering the attendees
+        System.out.println(concert.registerAttendee("Karen"));
+        System.out.println(concert.registerAttendee("Joey"));
+        System.out.println(concert.registerAttendee("Minnie"));
+
+        // event full
+        System.out.println(concert.registerAttendee("Jannice"));
+        System.out.println();
+
+        //display attendees
+        concert.displayAttendees();
+        System.out.println();
+
+        //cancel registration
+        System.out.println(concert.cancelRegistration("Minnie"));
+        System.out.println();
+
+        input.close();
 
     }
 
