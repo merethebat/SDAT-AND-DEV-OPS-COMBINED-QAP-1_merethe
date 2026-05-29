@@ -5,6 +5,12 @@ import static org.junit.jupiter.api.Assertions.*;
 public class EventTest {
 
     @Test
+    void testEventName() {
+        Event event = new Event("Summer Festival Concert", 1);
+        assertEquals("Summer Festival Concert", event.getEventName());
+    };
+
+    @Test
     void testCapacityLimit(){
         Event event = new Event("Event Test", 2);
 
