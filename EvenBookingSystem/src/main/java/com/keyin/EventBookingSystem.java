@@ -32,6 +32,7 @@ public class EventBookingSystem {
 
         // event full
         System.out.println(concert.registerAttendee("Jannice"));
+        System.out.println("Event is at full capacity. Cannot register Jannice");
         System.out.println();
 
         //display attendees
@@ -40,6 +41,8 @@ public class EventBookingSystem {
 
         //cancel registration
         System.out.println(concert.cancelRegistration("Minnie"));
+        System.out.println(concert.cancelRegistration(attendeeName));
+        System.out.println(attendeeName + "has successfuly cancelled their registration.");
         System.out.println();
 
         input.close();
